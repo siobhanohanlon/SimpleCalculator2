@@ -7,9 +7,8 @@ void main()
 	int input, noIterations, sum=0, average, validint, smallest, largest;
 	int i = 1;
 
-	// 
-	printf("Please enter number of Iterations:\t", i);
-	scanf("%d", &noIterations);
+	//Tell User how to work code
+	printf("Please enter numbers to get a detailed list of sum, average, max, min\nEnter any negative number to finish:\t\n");
 
 	//Until -1 is entered
 	do
@@ -29,7 +28,7 @@ void main()
 	average = sum / (i-1);
 
 	//Display Calculations
-	printf("\nSum of all numbers is:\t%d", sum);
-	printf("\nAverage of all numbers is:\t%d", average);
+	printf("\nSum of all numbers is:\t\t%d", sum);
+	printf("\nAverage of all numbers is:\t%d\n\n", average);
 	
 }
