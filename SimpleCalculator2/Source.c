@@ -4,21 +4,32 @@
 void main()
 {
 	// Declare variables
-	int num, sum, average, validint, smallest, largest;
-	int i = 0;
+	int input, noIterations, sum=0, average, validint, smallest, largest;
+	int i = 1;
 
-	//Create an array of numbers enetered
-	int[] numbs = new int[];
+	// 
+	printf("Please enter number of Iterations:\t", i);
+	scanf("%d", &noIterations);
 
 	//Until -1 is entered
-	while (num != -1)
+	do
 	{
 		printf("Please enter number %d:\t", i);
-		scanf("%d", &num);
+		scanf("%d", &input);
 
-		numbs[i] = num;
-		i++;
-	}
+		//This way the minus number needed to finish wont take from number
+		if (input >= 0)
+		{
+			sum += input;
+			i++;
+		}
+	} while (input >= 0);
 
+	//Calculations
+	average = sum / (i-1);
+
+	//Display Calculations
+	printf("\nSum of all numbers is:\t%d", sum);
+	printf("\nAverage of all numbers is:\t%d", average);
 	
 }
