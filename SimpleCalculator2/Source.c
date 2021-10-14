@@ -10,23 +10,32 @@ void main()
 	//Tell User how to work code
 	printf("Please enter numbers to get a detailed list of sum, average, max, min\nEnter any negative number to finish:\t\n");
 
+	//Ask User for first Number
 	printf("Please enter number %d:\t", i);
 	scanf("%d", &input);
+
+	//Add input to sum
 	sum += input;
+
+	//Change smallest and largest to entered number as if done after this, they're the values
 	smallest += input;
 	largest += input;
+
+	//Update counter and number of valid numbers entered
 	i++;
 	valid++;
 
 	//Until -1 is entered
 	while(input >= 0)
 	{
+		//Ask user to enter rest of numbers
 		printf("Please enter number %d:\t", i);
 		scanf("%d", &input);
 
 		//This way the minus number needed to finish wont take from number
 		if (input >= 0)
 		{
+			//Update Variables as input was positive
 			sum += input;
 			++valid;
 			i++;
@@ -45,12 +54,14 @@ void main()
 		}
 	} 
 
+	//Display text to show no more numbers to be entered
 	printf("\nFinished Calculations\n");
 
-	//Calculations
+	//Calculations, only done and displayed if sum over 1, meaning a positive number was entered
 	if (sum > 0)
 	{
 		average = sum / (i - 1);
+
 		//Display Calculations
 		printf("\nSum of all numbers is:\t\t%d", sum);
 		printf("\nAverage of all numbers is:\t%d", average);
